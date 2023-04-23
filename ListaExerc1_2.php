@@ -6,7 +6,7 @@
  $nota2 = "";
  $nota3 = "";
  $nota4= "";
- $media = "";
+ $mediaPonderada = "";
  
 
  if(isset($_POST["calcular"])){
@@ -32,9 +32,8 @@
         echo ("Preencha os campos corretamente");
     } else {
         $media = ($nota1*2 + $nota2*3 + $nota3*4 + $nota4*5)/14;
+        $msg = "O valor da média ponderada é = " . $mediaPonderada;
     }
-
-    $msg = "O valor da média é = " . $media;
 
  }
 
