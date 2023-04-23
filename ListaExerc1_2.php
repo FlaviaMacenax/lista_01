@@ -32,7 +32,7 @@
         echo("Preencha os campos corretamente");
     } else {
         $media = ($nota1*2 + $nota2*3 + $nota3*4 + $nota4*5)/14;
-        $msg = "O valor é da média ponderada é = " . $mediaP;
+        $msg = "O valor é da média ponderada é = " . $media;
     }
 
 
