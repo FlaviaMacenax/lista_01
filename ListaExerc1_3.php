@@ -16,11 +16,13 @@ if(isset($_POST["calcular"])){
         $altura = $_POST ["altura"];
     }
 
-    if($peso== "" || $altura="")
-    {echo ("<script> alert('Preencha todos os campos corretamente'); </script> ");}
+    if($peso== "" || $altura=="" ){
+        echo ("<script> alert('Preencha todos os campos corretamente'); </script> ");}
     else{
-        $imc = $peso/($altura*$altura);
-    }
+
+
+    $imc = $peso/($altura*$altura);
+    
 
     if($imc<18.5){
         echo("Abaixo do peso");
@@ -33,7 +35,7 @@ if(isset($_POST["calcular"])){
     }
 
     $msg = "O valor da IMC é = " . $imc;
-
+    }
 
 }
 
