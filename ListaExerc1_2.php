@@ -1,13 +1,13 @@
 <?php
 
- $botao = '';
- $msg = '';
+ $botao = "";
+ $msg = "";
  $msgErro = "";
- $nota1 = '';
- $nota2 = '';
- $nota3 = '';
- $nota4= '';
- $media = '';
+ $nota1 = "";
+ $nota2 = "";
+ $nota3 = "";
+ $nota4= "";
+ $media = "";
  
 
  if(isset($_POST["calcular"])){
@@ -51,7 +51,7 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <form action="calculomediaIFRN.php" method="post">
+    <form action="ListaExerc1_2.php" method="post">
 
     <table>
         <tr>
