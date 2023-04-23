@@ -43,7 +43,7 @@ if(isset($_POST["calcular"])){
     <title>Cálculo IMC</title>
 </head>
 <body>
-    <form action="questao_03.php" method="post">
+    <form action="ListaExerc1_3.php" method="post">
         <table>
             <tr>
                <th colspan="2">MENSAGENS: <?php echo $msg?> </th>
