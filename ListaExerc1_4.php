@@ -20,7 +20,7 @@ if(isset($_POST["calcular"])){
         $sexo = $_POST ["sexo"];
     }
 
-    if($peso== "" || $altura==""){
+    if($peso== "" || $altura=="" || $sexo ==""){
         echo ("<script> alert('Preencha todos os campos corretamente'); </script> ");}
     else{
 
