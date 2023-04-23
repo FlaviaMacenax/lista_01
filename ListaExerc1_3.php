@@ -1,7 +1,7 @@
 <?php
 $peso = "";
 $altura = "";
-$$imc = "";
+$imc = "";
 $msg = "";
 
 
@@ -16,7 +16,7 @@ if(isset($_POST["calcular"])){
         $altura = $_POST ["altura"];
     }
 
-    $$imc = $peso/ ($altura*$altura);
+    $imc = $peso/ ($altura*$altura);
 
     if($imc<18.5){
         echo("Abaixo do peso");
@@ -28,7 +28,7 @@ if(isset($_POST["calcular"])){
         echo("Obeso");
     }
 
-    $msg = "O valor da IMC é = " . $$imc;
+    $msg = "O valor da IMC é = " . $imc;
 
 }
 
