@@ -6,7 +6,7 @@
  $nota2 = "";
  $nota3 = "";
  $nota4= "";
- $mediaPonderada = "";
+ $media = "";
  
 
  if(isset($_POST["calcular"])){
@@ -29,11 +29,12 @@
     }
 
     if($nota1 == ""|| $nota2 == "" || $nota3 == "" || $nota4 == ""){
-        echo ("Preencha os campos corretamente");
+        echo("Preencha os campos corretamente");
     } else {
         $media = ($nota1*2 + $nota2*3 + $nota3*4 + $nota4*5)/14;
-        $msg = "O valor da média ponderada é = " . $mediaPonderada;
+        $msg = "O valor é da média ponderada é = " . $media;
     }
+
 
  }
 
@@ -45,7 +46,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Cálculo da Média do IFRN</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='calculo.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='ListaExerc1_2.css'>
     <script src='main.js'></script>
 </head>
 <body>
@@ -53,8 +54,7 @@
 
     <table>
         <tr>
-           <th colspan="2">MENSAGENS: <?php echo $msg?> </th>
-           
+            <th colspan="2">Mensagens: <?php echo $msg?> </th>
         </tr>
         <tr>
             <th colspan="2">Cálculo da Média Ponderada</th>
