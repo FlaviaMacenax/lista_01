@@ -16,7 +16,12 @@ if(isset($_POST["calcular"])){
         $altura = $_POST ["altura"];
     }
 
-    $imc = peso/ (altura*altura);
+    if($peso== "" || altura== "" ){ 
+        echo("Preencha todos os campos corretamente");  
+        echo ("Preencha todos os campos");
+    } else {
+        $imc = peso/(altura*altura);
+    }
 
     if(imc<18.5){
         echo("Abaixo do peso");
