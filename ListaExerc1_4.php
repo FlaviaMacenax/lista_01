@@ -16,11 +16,8 @@ if(isset($_POST["calcular"])){
         $altura = $_POST ["altura"];
     }
 
-    if($peso== "" OR $altura=""){    echo ("<script> alert('Preencha todos os campos corretamente'); </script> ");}
-    else{
-
     $imc = $peso/ ($altura*$altura);
-
+/*
     if($imc<18.5){
         echo("Abaixo do peso");
     }else if ($imc>=18.5 && $imc<25){
@@ -30,10 +27,11 @@ if(isset($_POST["calcular"])){
     }else if ($imc>=30){
         echo("Obeso");
     }
+*/
 
     $msg = "O valor da IMC é = " . $imc;
 
-}}
+}
 
 ?>
 
@@ -46,7 +44,7 @@ if(isset($_POST["calcular"])){
     <title>Cálculo IMC</title>
 </head>
 <body>
-    <form action="ListaExerc1_3.php" method="post">
+    <form action="ListaExerc1_4.php" method="post">
         <table>
             <tr>
                <th colspan="2">MENSAGENS: <?php echo $msg?> </th>
