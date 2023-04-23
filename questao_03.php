@@ -28,10 +28,7 @@ if(isset($_POST["calcular"])){
         echo("Obeso");
     }
 
-    
     $msg = "O valor da IMC é = " . $imc;
-
-
 
 }
 
