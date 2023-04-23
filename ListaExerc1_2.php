@@ -2,7 +2,6 @@
 
  $botao = "";
  $msg = "";
- $msgErro = "";
  $nota1 = "";
  $nota2 = "";
  $nota3 = "";
@@ -29,7 +28,7 @@
         $nota4 = $_POST ["nota4"];
     }
 
-    if($nota1 == ""|| nota2 == "" || $nota3 == "" || nota4 == ""){
+    if($nota1 == ""|| $nota2 == "" || $nota3 == "" || $nota4 == ""){
         echo ("Preencha os campos corretamente");
     } else {
         $media = ($nota1*2 + $nota2*3 + $nota3*4 + $nota4*5)/14;
