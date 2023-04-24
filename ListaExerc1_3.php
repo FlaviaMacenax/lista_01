@@ -21,6 +21,10 @@ if(isset($_POST["calcular"])){
         echo ("<script> alert('Preencha todos os campos corretamente'); </script> ");}
     else{
 
+        if (!is_numeric($peso) || (!is_numeric($altura))){
+            echo "As variáveis precisam ser números";
+    
+        } else{
 
     $imc = $peso/($altura*$altura);
     
@@ -35,9 +39,11 @@ if(isset($_POST["calcular"])){
         echo("Obeso");
     }
 
+    
+
     $msg = "O valor da IMC é = " . number_format($imc, 2);
     }
-
+    }
 }
 
 ?>
