@@ -20,22 +20,27 @@ if(isset($_POST["calcular"])) {
     if(isset($_POST["valor"])){
         $valor = $_POST["valor"];
     }
-    if($valor== "" ){    echo ("<script> alert('Preencha todos os campos corretamente'); </script> ");}
+    if($valor== "" || !is_numeric($valor) ){    echo ('Preencha todos os campos corretamente');}
             else{
 
+                
+                
 $nota100=$valor/100;
+$nota100= intval ($nota100);
 
 
 $nota50=$valor/50;
-
+$nota50= intval ($nota50);
 
 $nota10=$valor/10;
-
+$nota10= intval ($nota10);
 
 $nota5=$valor/5;
+$nota5= intval ($nota5);
 
 
 $nota1=$valor/1;
+$nota1= intval ($nota1);
 
 
 if($valor>=100){
