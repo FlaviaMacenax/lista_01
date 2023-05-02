@@ -1,4 +1,5 @@
 <?php
+
 $valor='';
 $nota100='';
 $nota50='';
@@ -11,7 +12,7 @@ $msg2='';
 $msg3='';
 $msg4='';
 $msg5='';
-
+$alerta='';
 
 if(isset($_POST["calcular"])) {
     $botao = $_POST["calcular"]; 
@@ -20,7 +21,7 @@ if(isset($_POST["calcular"])) {
     if(isset($_POST["valor"])){
         $valor = $_POST["valor"];
     }
-    if($valor== "" || !is_numeric($valor) ){    echo ('Preencha todos os campos corretamente');}
+    if($valor== "" || !is_numeric($valor) ){   $alerta= "Por favor, verifique se o campo está preenchido corretamente";}
             else{
 
                 
@@ -94,7 +95,8 @@ $msg="Valor informado R$".$valor;}}
 </head>
 <body>
 <form action="ListaExerc1_5.php" method="post">
-    <table>
+
+<table>
         <tr>
             <td><label for="lb1" >Informe o valor em reais: </td>
             <td><input type="text" name="valor"> </td>
@@ -115,8 +117,12 @@ $msg="Valor informado R$".$valor;}}
             <td colspan="2" class="mensagens"><?php echo $msg5; ?></td>
         </tr>
         <tr>
+            <td colspan="2" class="mensagens"><?php echo $alerta; ?></td>
+        </tr>
+        <tr>
             <td colspan="2" class="msg" ><?php echo $msg; ?></td>
         </tr>
+        
         <tr>
             <td colspan="2" ><input type="submit" name="calcular" class="bt"> </td>
         </tr>

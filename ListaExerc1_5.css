@@ -1,12 +1,15 @@
+
+
+
 body{
-    background-color: rgb(226, 226, 226);}
+    background-color:#001f29;}
 
 
     table{
         margin: auto;
-        background-color: rgb(51, 51, 59);
+        background-color:#001f29;
         margin-top: 20ch;
-       
+        box-shadow: 1ch 1ch 2ch #00db9a;
         border-radius: 7ch;
        
     }
@@ -16,14 +19,15 @@ body{
        
     }
     label{
-      color: rgb(253, 202, 160);
+      color: #ff6c17;
       margin-right: 10ch;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       padding-left: 2ch;
+      font-family: fantasy;
     }
     input{
        
-        background-color: rgb(198, 199, 209);
+        background-color: #efeeee;
         border-radius: 10ch;
         border: 0ch;
         margin-right: 2ch;
@@ -36,9 +40,10 @@ body{
        margin-bottom: 4ch;
        width: 15ch;
        height: 8ch;
-       background-color: rgb(99, 96, 110);
-       color: rgb(194, 194, 194);
-    
+       background-color: #efeeee;
+       color: #f18745;
+       box-shadow: 1ch 1ch 2ch #00db9a;
+       font-family: fantasy;
    }
    .mensagens{
     padding-left: 2ch;
@@ -47,12 +52,14 @@ body{
     height: 5px;
     padding-top: 16px;
     border-radius: 2cm;
-    color: rgb(141, 158, 172);
+    color: #00db9a;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
    
    }
    .msg{
-    color: rgb(253, 202, 160);
+    color: #ff6c17;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-left: 2ch;
+    font-family: fantasy;
    }
