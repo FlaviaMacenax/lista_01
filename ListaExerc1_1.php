@@ -14,7 +14,7 @@ if ($a == NULL || $b == NULL || $c == NULL) {
 }
 else {
     if ($a == 0) {
-        $msg = "Insira um número diferente de 0 (zero) para A."
+        $msg = "Insira um número diferente de 0 (zero) para A.";
     }
     
     else {
@@ -31,7 +31,7 @@ else {
         }
 
         else {
-            $msg = "Não existem raízes reais para esta equação."
+            $msg = "Não existem raízes reais para esta equação.";
         }
     }
 }
