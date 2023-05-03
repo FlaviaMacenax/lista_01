@@ -3,8 +3,8 @@ $peso = "";
 $altura="";
 $imc = "";
 $msg = "";
-
 $sexo= "";
+$alerta="";
 
 if(isset($_POST["calcular"])){
     $botao = $_POST["calcular"];
@@ -21,7 +21,7 @@ if(isset($_POST["calcular"])){
     }
 
     if($peso== "" || $altura=="" || $sexo ==""){
-        echo ("<script> alert('Preencha todos os campos corretamente'); </script> ");}
+        $alerta= "Por favor, verifique se o campo está preenchido corretamente";}
     else{
 
     $imc = $peso/($altura*$altura);
@@ -36,7 +36,7 @@ if(isset($_POST["calcular"])){
         }else if ($imc>=27.3 && $imc<32.3){
                 echo("Acima do peso ideal");
         }else if ($imc>=32.3){
-            echo("Obesa");
+            echo("Obesidade");
         }
     }
 
@@ -50,11 +50,11 @@ if(isset($_POST["calcular"])){
         }else if ($imc>=27.8 && $imc<31.1){
                 echo("Acima do peso ideal");
         }else if ($imc>=31.1){
-            echo("Obesa");
+            echo("Obesesidade");
         }
     }
 
-    $msg = "O valor da IMC é = " . number_format($imc, 2);
+    $msg = "O valor do seu IMC é = " . number_format($imc, 2);
     }
 
 }
@@ -62,39 +62,44 @@ if(isset($_POST["calcular"])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo IMC</title>
+
+    <link rel="stylesheet" href="ListaExerc1_5.css">
 </head>
 <body>
     <form action="ListaExerc1_4.php" method="post">
         <table>
             <tr>
-               <th colspan="2">MENSAGENS: <?php echo $msg?> </th>
-               
+                <td colspan="2">Cálculo do IMC</td>
             </tr>
             <tr>
-                <th colspan="2">Cálculo do IMC</th>
-            </tr>
-            <tr>
-                <td><label for="lb1">Digite o peso:</label></td>
+                <td><label for="lb1">Informe o peso:</label></td>
                 <td><input type="text" name="peso"></td>
             </tr>
             <tr>
-                <td><label for="lb2">Digite a altura:</label></td>
+                <td><label for="lb2">Informe a altura:</label></td>
                 <td><input type="text" name="altura"></td>
             </tr>
             <tr>
-                <td><label for="lb3">Selecione seu sexo:</label></td>
+                <td><label for="lb3">Informe seu sexo:</label></td>
                 <td><input type="radio" id="f" name="sexo" value="f" <?php echo ($sexo=="f")?> >
                         <label for="f"> F </label>
                     <input type="radio" id="m" name="sexo" value="m" <?php echo ($sexo=="m")?> >
                         <label for="m"> M </label>
                 </td>
-            </tr
+                </tr>
+                <tr>
+               <td colspan="2"><?php echo $alerta?> </td>
+            </tr>
+            <tr>
+               <td colspan="2"><?php echo $msg?> </td>
+               
+            </tr>
             <tr>
                 <td colspan="2"> <input class = "button" type="submit" name="calcular"></td>
             </tr>
